@@ -1,0 +1,50 @@
+<kml>
+  <Document>
+	<name>Exalted Canon Locations</name>
+    <description>Created from stephenls map data.</description>
+    <Folder>
+      <name>Locations</name>
+      <description>Locations</description>
+	  
+      <Style id="style-canon-gate">
+        <IconStyle>
+          <scale>1.0</scale>
+          <Icon>
+            <href>http://exalted-map.mfgames.com/icons/canon-gate.png</href>
+          </Icon>
+        </IconStyle>
+      </Style>
+      <Style id="style-canon">
+        <IconStyle>
+          <scale>1.0</scale>
+          <Icon>
+            <href>http://exalted-map.mfgames.com/icons/canon.png</href>
+          </Icon>
+        </IconStyle>
+      </Style>
+	  
+      <Folder>
+        <name>POI</name>
+        <Placemark>
+		  <name>Imperial Mountain</name>
+          <styleUrl>#style-canon</styleUrl>
+          <Point>
+            <coordinates>-20, 12</coordinates>
+          </Point>
+        </Placemark>
+	  </Folder>
+
+	  <Folder>
+		<name>Gates</name>
+		<description>Celestial Gates</description>
+        <Placemark>
+		  <name>Celestial Gate #10</name>
+          <styleUrl>#style-canon-gate</styleUrl>
+          <Point>
+            <coordinates>22.7673, 8</coordinates>
+          </Point>
+        </Placemark>
+	  </Folder>
+	</Folder>
+  </Document>
+</kml>

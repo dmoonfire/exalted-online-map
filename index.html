@@ -5,31 +5,48 @@
     <style>
       .map {
         height: 400px;
-        width: 100%;
+        width: 90%;
+	    margin-left: auto;
+	    margin-right: auto;
       }
     </style>
-    <script src="http://openlayers.org/en/v3.0.0/build/ol.js" type="text/javascript"></script>
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://openlayers.org/en/v3.0.0/build/ol-debug.js" type="text/javascript"></script>
+
     <title>Map of Creation</title>
+
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <h2>Creation</h2>
-    <div id="map" class="map" style='height: 512px'></div>
-    <script type="text/javascript">
-      var map = new ol.Map({
-        target: 'map',
-        layers: [
-          new ol.layer.Tile({
-            source: new ol.source.XYZ({
-	          layer: 'vector',
-	          url: 'http://exalted-map.mfgames.com/exalted-map/z{z}/x{x}y{y}.png'
-            })
-          })
-        ],
-        view: new ol.View({
-          center: ol.proj.transform([37.41, 8.82], 'EPSG:4326', 'EPSG:3857'),
-          zoom: 3
-        })
-      });
-    </script>
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-12">
+		  <h1>Creation</h1>
+		  <div id="map" class="map">
+			<div id="popup"></div>
+		  </div>
+		  
+		  <h2>Layers</h2>
+		  
+		  <p>There are two layers available for the maps. Feel free to hotlink or use them both in your own maps. As long as my site is up (and I don't get a take-down notice), these will be available. If not, report an error over at <a href="https://github.com/dmoonfire/exalted-online-map/issues">the Github site</a>.</p>
+		  
+		  <h3>creation</h3>
+		  
+		  <ul>
+			<li><a href="/creation">Click here to browse images</a></li>
+			<li>http://exalted-map.mfgames.com/creation/z{z}/x{x}y{y}.png</li>
+		  </ul>
+		  
+		  <h3>creation-geo</h3>
+		  
+		  <ul>
+			<li><a href="/creation-geo">Click here to browse images</a></li>
+			<li>http://exalted-map.mfgames.com/creation-geo/z{z}/x{x}y{y}.png</li>
+		  </ul>
+		</div>
+	  </div>
+	</div>
   </body>
+  <script src="map.js" type="text/javascript"></script>
 </html>
